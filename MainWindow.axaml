@@ -30,7 +30,7 @@
                         <TextBlock Margin = "5 5 0 0" > Tags2 </TextBlock>
                         <TextBlock Margin = "5 5 0 0" > Tags3 </TextBlock>
                         <TextBlock Margin = "5 5 0 0" > Tags4 </TextBlock>
-                        <TextBlock DockPanel.Dock = "Right" Margin = "0 5 5 0">4/5 </TextBlock>
+                        <TextBlock DockPanel.Dock = "Right" Margin = "0 5 20 0">4/5 </TextBlock>
                         <TextBlock DockPanel.Dock = "Right" TextAlignment = "Right" Margin = "0 5 12 0"> Rate this article </TextBlock>
                     </DockPanel>
             </StackPanel>
