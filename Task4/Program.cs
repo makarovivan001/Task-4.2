@@ -2,7 +2,7 @@
 using Avalonia.ReactiveUI;
 using System;
 
-namespace Task4;
+namespace task4;
 
 sealed class Program
 {

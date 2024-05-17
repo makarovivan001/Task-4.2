@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace Task4.ViewModels;
+namespace task4.ViewModels;
 
 public class ViewModelBase : ReactiveObject
 {

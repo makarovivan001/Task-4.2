@@ -6,7 +6,7 @@ using Avalonia.Data.Converters;
 using Avalonia.Media;
 using Avalonia.Platform;
 
-namespace Task4.Infrastructure;
+namespace task4.Infrastructure;
 
 public class BitmapValueConverter : IValueConverter
 {

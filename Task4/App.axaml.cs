@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Task4.ViewModels;
-using Task4.Views;
+using task4.ViewModels;
+using task4.Views;
 
-namespace Task4;
+namespace task4;
 
 public partial class App : Application
 {
