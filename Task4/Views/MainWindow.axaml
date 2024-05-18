@@ -31,10 +31,10 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Grid.Row = "1" Grid.Column = "0"  Margin = "0 20 0 0" Orientation = "Vertical" Grid.ColumnSpan = "2">
-                            <TextBlock Margin = "5 0 0 0" Text = "{Binding Article}"></TextBlock>
+                            <TextBlock TextWrapping = "Wrap" Margin = "5 0 0 0" Text = "{Binding Article}"></TextBlock>
                             <TextBlock  TextWrapping = "Wrap" Margin = "5 15 30 0" Text = "{Binding Text}"></TextBlock> 
                             <Image HorizontalAlignment="Center" Source = "{Binding ImagePath, Converter={x:Static infrastructure:BitmapValueConverter.Instance}}", Height  = "256" Width = "412" />
-                            <ListBox Margin = "0 4 0 0" ItemsSource="{Binding Tags}">
+                            <ListBox Margin = "5 4 0 0" ItemsSource="{Binding Tags}">
                                 <ListBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <VirtualizingStackPanel Orientation="Horizontal"/>
