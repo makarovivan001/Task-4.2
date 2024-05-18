@@ -1,6 +1,7 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:task4.ViewModels"
+        xmlns:infrastructure="using:task4.Infrastructure"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
@@ -14,7 +15,7 @@
     </Design.DataContext>
 
    <Grid RowDefinitions = "auto,*"
-            ColumnDefinitions = "*,auto,*">
+            ColumnDefinitions = "*,*,*">
             <Border BorderThickness = "1" BorderBrush = "Black" Grid.ColumnSpan = "3">
                 <DockPanel Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "3">
                     <TextBlock Margin = "6 0 0 10">Home</TextBlock>
@@ -30,9 +31,10 @@
             <ListBox  Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "2" ItemsSource = "{Binding BlogEnities}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Grid.Row = "1" Grid.Column = "0"  Margin = "0 20 0 0" Orientation = "Vertical" Grid.ColumnSpan = "2">
+                        <StackPanel Grid.Row = "1" Grid.Column = "0"  Margin = "0 20 0 0" Orientation = "Vertical" Grid.ColumnSpan = "2" >
+                            
                             <TextBlock TextWrapping = "Wrap" Margin = "5 0 0 0" Text = "{Binding Article}"></TextBlock>
-                            <TextBlock  TextWrapping = "Wrap" Margin = "5 15 30 0" Text = "{Binding Text}"></TextBlock> 
+                            <TextBlock  TextWrapping = "Wrap" Margin = "5 15 10 15" Text = "{Binding Text}"></TextBlock> 
                             <Image HorizontalAlignment="Center" Source = "{Binding ImagePath, Converter={x:Static infrastructure:BitmapValueConverter.Instance}}" Height  = "256" Width = "412" />
                             <ListBox Margin = "5 4 0 0" ItemsSource="{Binding Tags}">
                                 <ListBox.ItemsPanel>
@@ -45,17 +47,20 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <ListBox Grid.Row = "1" Grid.Column = "2" ItemsSource = "{Binding NewsEnities}" >
+            <ListBox Grid.Row = "1" Grid.Column = "2" ItemsSource = "{Binding NewsEnities}"  >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
 
-                        <Border BorderThickness = "200" Grid.Row = "1" Grid.Column = "1">
+                        
+                        <Border BorderThickness = "5"  Grid.Row = "1" Grid.Column = "0" >
+                            
+                            <StackPanel Grid.Row = "1" Grid.Column = "2"  Margin = "0 37 0 0" Orientation = "Vertical">
+                                <TextBlock TextWrapping = "Wrap" Margin = "10 10 5 0" Text = "{Binding Text}"></TextBlock>
+                                <TextBlock TextAlignment = "Right"  Margin = "0 2 15 0" TextDecorations = "Underline"> More </TextBlock>
+                                <TextBlock TextWrapping = "Wrap" Margin = "10 4 15 0" Text = "{Binding PublishDate}"></TextBlock>
+                            </StackPanel>
                         </Border>
-                        <StackPanel Grid.Row = "1" Grid.Column = "2"  Margin = "0 37 0 0" Orientation = "Vertical">
-                            <TextBlock TextWrapping = "Wrap" Margin = "10 10 5 0" Text = "{Binding Text}"></TextBlock>
-                            <TextBlock TextAlignment = "Right"  Margin = "0 2 15 0" TextDecorations = "Underline"> More </TextBlock>
-                            <TextBlock TextWrapping = "Wrap" Margin = "0 4 15 0" Text = "{Binding PublishDate}"></TextBlock>
-                        </StackPanel>
+                        
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
