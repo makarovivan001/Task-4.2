@@ -54,7 +54,7 @@
                         <StackPanel Grid.Row = "1" Grid.Column = "2"  Margin = "0 37 0 0" Orientation = "Vertical">
                             <TextBlock TextWrapping = "Wrap" Margin = "10 10 5 0" Text = "{Binding Text}"></TextBlock>
                             <TextBlock TextAlignment = "Right"  Margin = "0 2 15 0" TextDecorations = "Underline"> More </TextBlock>
-                            <TextBlock TextAlignment = "Right"  Margin = "0 4 15 0" Text = "{Binding PublishDate}"></TextBlock>
+                            <TextBlock TextWrapping = "Wrap" Margin = "0 4 15 0" Text = "{Binding PublishDate}"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
