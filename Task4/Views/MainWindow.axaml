@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Task4.Views.MainWindow"
+        x:Class="task4.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="task4">
@@ -33,7 +33,7 @@
                         <StackPanel Grid.Row = "1" Grid.Column = "0"  Margin = "0 20 0 0" Orientation = "Vertical" Grid.ColumnSpan = "2">
                             <TextBlock TextWrapping = "Wrap" Margin = "5 0 0 0" Text = "{Binding Article}"></TextBlock>
                             <TextBlock  TextWrapping = "Wrap" Margin = "5 15 30 0" Text = "{Binding Text}"></TextBlock> 
-                            <Image HorizontalAlignment="Center" Source = "{Binding ImagePath, Converter={x:Static infrastructure:BitmapValueConverter.Instance}}", Height  = "256" Width = "412" />
+                            <Image HorizontalAlignment="Center" Source = "{Binding ImagePath, Converter={x:Static infrastructure:BitmapValueConverter.Instance}}" Height  = "256" Width = "412" />
                             <ListBox Margin = "5 4 0 0" ItemsSource="{Binding Tags}">
                                 <ListBox.ItemsPanel>
                                     <ItemsPanelTemplate>
